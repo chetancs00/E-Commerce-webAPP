@@ -8,12 +8,12 @@ const AppBase = (props) => {
       <div  >
         <AppHeader />
       </div>
-      <div style={{marginTop : "95px"}} >
+      <div style={{marginTop : "95px"}} className='mb-5' >
         {props.children}
       </div>
-      {/* <div>
+      <div>
         <AppFooter />
-      </div> */}
+      </div>
     </>
   );
 };

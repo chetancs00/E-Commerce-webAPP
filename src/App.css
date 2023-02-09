@@ -181,3 +181,7 @@
   transition: width 0.5s ease-in-out;
 }
 
+.my-link{
+  text-decoration: none;
+  color: black;
+}
