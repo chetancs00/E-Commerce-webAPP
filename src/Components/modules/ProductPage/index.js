@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { useLocation, useParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { PRODUCTS } from "../../../constants/api";
 import Loader from "../../../constants/Loader";
 import { getAPI } from "../../../utils/apiRequests";
 import { amountNumberFormatting } from "../../../utils/common";
 import AppBase from "../../Base/AppBase";
-import { ArrowRight, CartCheck } from "react-bootstrap-icons";
+import {  CartCheck } from "react-bootstrap-icons";
 import { useDispatch, useSelector } from "react-redux";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -31,7 +31,7 @@ const ProductPage = (props) => {
   useEffect(() => {
     setProductId(location.state?.productId);
     getProductDetails(productId);
-  }, [location]);
+  }, [location,productId]);
 
   useEffect(() => {
     itemInCart = cart.find((item) => item.productId === productId);
@@ -127,7 +127,7 @@ const ProductPage = (props) => {
         pauseOnFocusLoss
         draggable
         pauseOnHover
-        theme="light"
+        theme="dark"
       />
       {!loading ? (
         <div className="container row ">

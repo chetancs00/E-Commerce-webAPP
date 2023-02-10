@@ -33,10 +33,10 @@ const AppFooter = () => {
               <h5 className="text-uppercase font-weight-bold">Contact Us</h5>
               <ul className="list-unstyled">
                 <li>
-                  <a className="my-link" href="#">Email: chetan99sharma.cs@gmail.com</a>
+                  <a className="my-link">Email: chetan99sharma.cs@gmail.com</a>
                 </li>
                 <li>
-                  <a className="my-link" href="#">Phone: +91-7728910628</a>
+                  <a className="my-link" >Phone: +91-7728910628</a>
                 </li>
               </ul>
             </Col>

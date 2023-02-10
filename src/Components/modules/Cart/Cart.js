@@ -21,7 +21,6 @@ const Cart = () => {
     itemQuantity[item.productId] = item.quantity;
   });
 
-
   const handleRemoveFromCart = (productId) => {
     if (itemQuantity[productId] > 1) {
       dispatch(decreaseItem({ productId: productId }));
@@ -49,6 +48,7 @@ const Cart = () => {
                     ? item.productImage[0].url
                     : "default-image.jpg"
                 }
+                alt="Product"
                 className="img-thumbnail"
                 style={{ height: "90px" }}
               />
