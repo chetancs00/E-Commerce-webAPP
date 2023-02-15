@@ -17,7 +17,7 @@ const Home = () => {
   const getProducts = () => {
     setLoading(true);
     let apiParams = {
-      pagination: false,
+      // pagination: false,
     };
     let successFn = (res) => {
       setLoading(false);
@@ -54,12 +54,12 @@ const AnimatedProduct = ({ product, index }) => {
     initial={{ y: 100, scale: 0.5 }}
     animate={{ y: 0, scale: 1 }}
     transition={{ delay: index * 0.1 }}
-    >
+    > 
       <ProductCard
-        productTitle={product.name ? product.name.slice(0, 45) : ""}
-        productImage={product.image}
-        productId={product.id}
-        productPrice={product.price}
+        productTitle={product.product_name ? product.product_name.slice(0, 45) : ""}
+        productImage={product.product_image}
+        productId={product._id}
+        productPrice={product.product_price}
       />
     </motion.div>
   );

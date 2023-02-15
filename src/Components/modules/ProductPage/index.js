@@ -41,8 +41,8 @@ const ProductPage = (props) => {
   const getProductDetails = async (productId) => {
     setLoading(true);
     let apiParams = {
-      id: location.state.productId,
-      pagination: false,
+      _id: location.state.productId,
+      // pagination: false,
     };
     let successFn = (res) => {
       setLoading(false);
@@ -132,17 +132,16 @@ const ProductPage = (props) => {
       {!loading ? (
         <div className="container row ">
           <div className="col">
-            {product?.image?.map((img) => (
+           
               <img
-                src={img?.url}
-                style={{ height: 344, width: "555px", margin: "auto" }}
+                src={product?.product_image}
+                style={{ height: 344, width: "330px", margin: "auto", objectFit : "contain" }}
                 alt={product?.name}
-                key={img?.id}
               />
-            ))}
+           
           </div>
           <div className="col d-flex flex-column p-4">
-            <h3 className="text-primary">{product?.name}</h3>
+            <h3 className="text-primary">{product?.product_name}</h3>
             <p>{product?.description}</p>
             <h4 className="text-primary mr-3">
               ₹{amountNumberFormatting(product?.price)}

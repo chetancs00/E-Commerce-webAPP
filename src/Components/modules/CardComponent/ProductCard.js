@@ -23,7 +23,7 @@ const ProductCard = ({
     <div className="my-3">
       <div
         className="card"
-        style={{ width: "20rem", height: "450px", backgroundColor: "#ADD8E6" }}
+        style={{ width: "20rem", height: "450px", backgroundColor: "#301E67", color: "#FFFF" }}
       >
         <img src={productImage} className="card-img-top" alt="..." />
 
